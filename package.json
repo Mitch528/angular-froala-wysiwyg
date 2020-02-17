@@ -1,6 +1,7 @@
 {
-  "name": "angular-froala-wysiwyg-base",
-  "version": "2.9.6-1",
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@mitch528/angular-froala-wysiwyg",
+  "version": "2.9.7",
   "description": "Angular 2, 4, 5, 6 and 7 bindings for Froala WYSIWYG HTML rich text editor",
   "main": "bundles/angular-froala-wysiwyg.umd.js",
   "typings": "index.d.ts",
@@ -9,14 +10,22 @@
     "lite-server": "lite-server -c demo/bs-config.json",
     "demo.serve": "npm run -s build link demo.build lite-server",
     "demo.build": "ng build --aot=false",
-    "build": "ngm build --prod src --clean",
+    "build": "ng-packagr -p package.json",
     "link": "ngm link -p src --here",
     "build.watch": "ngm build -p src --watch --skip-bundles",
     "start": "ng serve --aot=false --host 0.0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/froala/angular-froala-wysiwyg.git"
+    "url": "https://github.com/Mitch528/angular-froala-wysiwyg.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
   },
   "keywords": [
     "angular2",
@@ -24,6 +33,7 @@
     "angular5",
     "angular6",
     "angular7",
+    "angular9",
     "ng2",
     "ng4",
     "ng5",
@@ -46,37 +56,37 @@
   "bugs": {
     "url": "https://github.com/froala/angular-froala-wysiwyg/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "froala-editor": "2.9.6",
-    "node-sass": "^4.12.0",
-    "tslib": "^1.9.0"
+    "node-sass": "^4.13.1",
+    "tslib": "^1.9.0",
+    "jquery": "^3.4.1"
   },
-  "peerDependencies": {},
   "devDependencies": {
-    "lite-server": "^2.5.4",
-    "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "^7.1.4",
-    "@angular/common": "^7.2.0",
-    "@angular/compiler": "^7.2.0",
-    "@angular/compiler-cli": "^7.2.0",
-    "@angular/core": "^7.2.0",
-    "@angular/forms": "^7.2.0",
-    "@angular/http": "^7.2.0",
-    "@angular/language-service": "^7.2.0",
-    "@angular/platform-browser": "^7.2.0",
-    "@angular/platform-browser-dynamic": "^7.2.0",
-    "@angular/router": "^7.2.0",
-    "@types/jquery": "^2.0.40",
+    "@angular-devkit/build-angular": "^0.900.2",
+    "@angular/cli": "^9.0.2",
+    "@angular/common": "^9.0.1",
+    "@angular/compiler": "^9.0.1",
+    "@angular/compiler-cli": "^9.0.1",
+    "@angular/core": "^9.0.1",
+    "@angular/forms": "^9.0.1",
+    "@angular/language-service": "^9.0.1",
+    "@angular/platform-browser": "^9.0.1",
+    "@angular/platform-browser-dynamic": "^9.0.1",
+    "@angular/router": "^9.0.1",
+    "@types/jquery": "^3.3.32",
     "@types/marked": "0.0.28",
     "@types/node": "7.0.0",
     "@types/tapable": "^1.0.4",
     "@types/webpack": "^4.39.5",
     "classlist-polyfill": "1.0.3",
+    "lite-server": "^2.5.4",
+    "ng-packagr": "^9.0.0",
     "ngm-cli": "^1.0.4",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.2",
     "ts-helpers": "^1.1.1",
-    "typescript": "^3.1.6",
-    "zone.js": "^0.8.26"
+    "typescript": "^3.7.5",
+    "zone.js": "^0.10.2"
   }
 }

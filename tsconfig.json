@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "../dist",
+    "outDir": "./dist",
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
@@ -25,7 +25,7 @@
     "node_modules"
   ],
   "files": [
-    "./index.ts"
+    "./src/index.ts"
   ],
   "angularCompilerOptions": {
     "genDir": "../temp/factories",
